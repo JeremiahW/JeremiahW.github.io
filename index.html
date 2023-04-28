@@ -20,6 +20,8 @@
 	<link rel="stylesheet" href="static/app/css/wallet.css">
 	<script type="text/javascript" src="static/app/js/common.bundle.js"></script>
 	<script type="text/javascript" src="static/app/js/chat.bundle.js"></script>
+    <script type="text/javascript" src="static/app/js/emoj.js"></script>
+
 </head>
 <body>
 	<div id="vueApp" class="wrapper">
@@ -313,7 +315,7 @@
 											</div>
 
 											<template v-if="dialog.type == 'text'">
-												<div class="wechat-dialog-text">{{dialog.content}}</div>
+												<div class="wechat-dialog-text">{{getEmoj(dialog.content)}}</div>
 											</template>
 
 											<template v-if="dialog.type == 'image'">
